@@ -1,22 +1,24 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import './index.css'
-import App from './App.jsx'
-import { ApolloProvider, ApolloClient, InMemoryCache } from '@apollo/client';
-import ContextProvider from './context/ContextProvider'
+import App from './App.jsx';
 
+import { ApolloProvider, ApolloClient, InMemoryCache } from '@apollo/client';
+import ContextProvider from './context/ContextProvider.jsx';
 
 const client = new ApolloClient({
-  uri: 'http://localhost:4000',
+  uri: `${import.meta.env.VITE_DGRAPH_ENDPOINT}`, // Dgraph Cloud End point
+  headers: {
+    'Authorization': `Bearer ${import.meta.env.VITE_DGRAPH_API_KEY}`,  // API Key
+  },
   cache: new InMemoryCache(),
-})
+});
 
 createRoot(document.getElementById('root')).render(
-  <StrictMode>
-    <ApolloProvider client={client}>
-      <ContextProvider>
-        <App />
-      </ContextProvider>
-    </ApolloProvider>
-  </StrictMode>,
+  <ApolloProvider client={client}>
+    <ContextProvider>
+        <StrictMode>
+          <App />
+      </StrictMode>
+    </ContextProvider>
+  </ApolloProvider>,
 )

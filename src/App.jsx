@@ -1,14 +1,10 @@
 import './App.css'
-import AsideNav from './components/asideNav'
+import AsideNav from './components/AsideNav'
 import MainContent from './components/mainContent'
-
-// import Track from './components/track'
 
 function App() {
   return (
     <>
-      {/* <p>Hello React</p> */}
-      {/* <Track /> */}
       <main className='site'>
         <AsideNav />
         <MainContent />
