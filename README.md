@@ -1,8 +1,20 @@
-# React + Vite
+# AI Chatbot with Dgraph Cloud, Gemini API, React, and GraphQL
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+### **ModusHack + Hashnode**
 
-Currently, two official plugins are available:
+## Project Demo:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+View the project live [Demo on Netlify](https://hypermodegtp.netlify.app/)
+
+## About the Project:
+
+This project is based on the Hashnode Hackathon.
+
+## Project Title:
+
+ AI Chatbot with Dgraph Cloud, Gemini API, React, and GraphQL
+
+## Project Setup:
+
+- **npm run dev:** to start up the vite server
+- **npm run nodemon**: backend server
